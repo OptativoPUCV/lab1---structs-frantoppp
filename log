@@ -29,3 +29,35 @@ exercises.c:57:13: note: previous definition of ‘p’ with type ‘Persona *�
       |             ^
 Compilation failed
 ab4f67a
+Fri 17 Mar 2023 06:01:45 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:58:12: error: conflicting types for ‘p’; have ‘Persona’
+   58 |    Persona p = (Persona *) malloc(sizeof(Persona));
+      |            ^
+exercises.c:57:13: note: previous definition of ‘p’ with type ‘Persona *’
+   57 |   Persona * p = NULL;
+      |             ^
+exercises.c:58:16: error: invalid initializer
+   58 |    Persona p = (Persona *) malloc(sizeof(Persona));
+      |                ^
+exercises.c:59:11: error: invalid type argument of ‘->’ (have ‘Persona’)
+   59 |   strcpy(p->nombre,nombre);
+      |           ^~
+exercises.c:60:11: error: invalid type argument of ‘->’ (have ‘Persona’)
+   60 |   strcpy(p->rut,rut);
+      |           ^~
+exercises.c:61:4: error: invalid type argument of ‘->’ (have ‘Persona’)
+   61 |   p->edad = edad;
+      |    ^~
+exercises.c:63:11: error: incompatible types when returning type ‘Persona’ but ‘Persona *’ was expected
+   63 |    return p;
+      |           ^
+exercises.c:64:1: error: control reaches end of non-void function [-Werror=return-type]
+   64 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0bf47c2
