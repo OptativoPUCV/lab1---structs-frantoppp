@@ -79,7 +79,7 @@ Vector * crearVector(int n) {
   Vector *vectorcreado = NULL;
   vectorcreado = (vectorcreado *) malloc(sizeof(vector));
   vectorcreado-> datos = (int *) calloc(n, sizeof(int));
-  vectorcreado-> largo = n;
+  vectorcreado-> capacidad = n;
   
    return vectorcreado;
 }

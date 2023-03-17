@@ -80,3 +80,13 @@ exercises.c:82:15: error: ‘Vector’ has no member named ‘largo’
       |               ^~
 Compilation failed
 8bb1cc9
+Fri 17 Mar 2023 06:11:51 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:80:33: error: expected expression before ‘)’ token
+   80 |   vectorcreado = (vectorcreado *) malloc(sizeof(vector));
+      |                                 ^
+Compilation failed
+9b86f69
